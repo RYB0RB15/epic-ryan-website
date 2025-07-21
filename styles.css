@@ -1,11 +1,20 @@
 body {
-    background-color: cornflowerblue;
+    background-image: 
+        radial-gradient(circle at 0% 0%, yellow 10%, rgba(0,0,0,0) 15%),
+        linear-gradient(white, rgba(0,0,0,0) 15%),
+        conic-gradient( at 50% 80%, dodgerblue 90deg, lawngreen 90deg, limegreen 110deg, rgba(0,0,0,0) 120deg, rgba(0,0,0,0) 240deg, limegreen 250deg, lawngreen 270deg, dodgerblue 270deg),
+        url(images/brix.jpg);
+    border-radius: 50%;
     color: #ffffff;
 }
 
 .header {
     margin:auto;
-    text-align:center;
-    width: 50%;
+    width: 45%;
     border:20px solid magenta;
+    color:lawngreen;
+}
+
+.cards {
+
 }
