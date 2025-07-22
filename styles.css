@@ -1,11 +1,5 @@
 body {
-    background-image: 
-        radial-gradient(circle at 0% 0%, yellow 10%, rgba(0,0,0,0) 15%),
-        radial-gradient(circle at 50% 400%, rgba(0,0,0,0) 77.6%, dodgerblue 77.6%, dodgerblue 90%, white),
-        conic-gradient( at 50% 80%, dodgerblue 90deg, lawngreen 90deg, limegreen 120deg, rgba(0,0,0,0) 120deg, rgba(0,0,0,0) 240deg, limegreen 240deg, lawngreen 270deg, dodgerblue 270deg),
-        url(images/brix.jpg);
-    border-radius: 50%;
-    color: #ffffff;
+
 }
 
 .header {
