@@ -29,9 +29,11 @@ body {
     background-image:
         linear-gradient(to right, rgba(0,0,0,0.8), transparent 50%),
         linear-gradient(transparent 90%, rgba(72, 0, 255, 0.5)),
+        url(images/ropecropped.png),
         url(images/wellwall3.png) ;
-    background-size: 316px, 316px, 315px;
+    background-size: 316px, 316px, auto, 315px;
     background-repeat: repeat-y;
+    background-position-x: 50%;
 }
 
 .wellbottom > part {

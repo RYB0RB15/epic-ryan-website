@@ -1,13 +1,12 @@
 body {
     background-image: 
-        radial-gradient(circle at 0% 0%, yellow 10%, rgba(0,0,0,0) 15%), 
         radial-gradient(circle at 50% 600%, rgba(0,0,0,0) 85.5%, blue 85.5%, blue 95%, white), 
         conic-gradient( at 50% 80%, lawngreen 90deg, limegreen 118deg, rgba(0,0,0,0) 120deg, rgba(0,0,0,0) 240deg, limegreen 242deg, lawngreen 270deg), 
         url(images/brix.jpg);
     background-repeat:no-repeat;
     background-position:
         center bottom;
-    background-size:auto,auto,auto,700px;
+    background-size:auto,auto,700px;
 }
 
 .header {
@@ -47,4 +46,13 @@ body {
     position:absolute;
     left:70%;
     top:65%;
+}
+
+.sun {
+    position:absolute;
+    top:0%;
+    left:0%;
+    background-image: radial-gradient(circle at 0% 0%, yellow 45%, rgba(0,0,0,0) 70%);
+    width:320px;
+    height:320px;
 }
