@@ -1,0 +1,50 @@
+body {
+    background-image: 
+        radial-gradient(circle at 0% 0%, yellow 10%, rgba(0,0,0,0) 15%), 
+        radial-gradient(circle at 50% 600%, rgba(0,0,0,0) 85.5%, blue 85.5%, blue 95%, white), 
+        conic-gradient( at 50% 80%, lawngreen 90deg, limegreen 118deg, rgba(0,0,0,0) 120deg, rgba(0,0,0,0) 240deg, limegreen 242deg, lawngreen 270deg), 
+        url(images/brix.jpg);
+    background-repeat:no-repeat;
+    background-position:
+        center bottom;
+    background-size:auto,auto,auto,700px;
+}
+
+.header {
+    margin:auto;
+    margin-bottom:20px;
+    width: 45%;
+    border:20px solid magenta;
+    color:lawngreen;
+    clear:both;
+    display:table;
+}
+
+.frogz {
+    display: block;
+    margin: auto;
+    padding: 5px;
+}
+
+.brownbox {
+    width: 40%;
+    margin: auto;
+    background-color: saddlebrown;
+    border: ridge gold 10px;
+    color: white;
+    font-size: 20px;
+    line-height: 5px;
+}
+
+.titletext {
+    text-align: center;
+    font-size: 45px;
+    white-space: nowrap;
+    text-shadow: 0px 0px 10px black;
+}
+
+.well {
+    position:absolute;
+    left:70%;
+    top:65%;
+}

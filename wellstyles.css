@@ -1,0 +1,43 @@
+.welltop {
+    z-index:1;
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+body {
+    background-color:black;
+    background-image:
+        linear-gradient(blue 40%, lawngreen 42%, black 80%);
+    height:150%;
+    background-repeat:no-repeat;
+    color: white;
+}
+
+.wellbottom {
+    z-index:0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);  
+    top:500px;
+    padding-top:370px;
+    padding-bottom: 60vh;
+    width:315px;
+    display: flex;
+    flex-direction: column;
+    background-image:
+        linear-gradient(to right, rgba(0,0,0,0.8), transparent 50%),
+        linear-gradient(transparent 90%, rgba(72, 0, 255, 0.5)),
+        url(images/wellwall3.png) ;
+    background-size: 316px, 316px, 315px;
+    background-repeat: repeat-y;
+}
+
+.wellbottom > part {
+    width: auto;
+    padding: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
