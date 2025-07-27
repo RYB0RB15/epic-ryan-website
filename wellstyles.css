@@ -22,7 +22,7 @@ body {
     z-index:0;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);  
+    transform: translateX(-50%);
     top:500px;
     padding-top:400px;
     padding-bottom: 60vh;
@@ -59,7 +59,7 @@ body {
 }
 
 .wellbottom > song {
-    
+
 }
 
 .wellbottom > frucket{
