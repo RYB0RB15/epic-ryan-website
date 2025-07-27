@@ -1,11 +1,3 @@
-.welltop {
-    z-index:1;
-    position:absolute;
-    top:0;
-    left:50%;
-    transform:translateX(-50%);
-}
-
 body {
     background-color:black;
     background-image:
@@ -13,6 +5,14 @@ body {
     height:150%;
     background-repeat:no-repeat;
     color: white;
+}
+
+.welltop {
+    z-index:1;
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
 }
 
 .wellbottom {
@@ -42,4 +42,12 @@ body {
     text-align: center;
     line-height: 75px;
     font-size: 30px;
+}
+
+.wellbottom > song {
+    
+}
+
+.frucket{
+    
 }
