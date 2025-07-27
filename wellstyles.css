@@ -13,6 +13,9 @@ body {
     top:0;
     left:50%;
     transform:translateX(-50%);
+    background-image:url(images/ropecropped.png);
+    background-position: 50% 95%;
+    background-repeat:no-repeat;
 }
 
 .wellbottom {
@@ -21,7 +24,7 @@ body {
     left: 50%;
     transform: translateX(-50%);  
     top:500px;
-    padding-top:370px;
+    padding-top:400px;
     padding-bottom: 60vh;
     width:315px;
     display: flex;
@@ -29,11 +32,17 @@ body {
     background-image:
         linear-gradient(to right, rgba(0,0,0,0.8), transparent 50%),
         linear-gradient(transparent 90%, rgba(72, 0, 255, 0.5)),
-        url(images/ropecropped.png),
         url(images/wellwall3.png) ;
-    background-size: 316px, 316px, auto, 315px;
+    background-size: 316px, 316px, 315px;
     background-repeat: repeat-y;
     background-position-x: 50%;
+}
+
+.wellbottom > rope {
+    z-index:0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .wellbottom > part {
@@ -42,12 +51,21 @@ body {
     text-align: center;
     line-height: 75px;
     font-size: 30px;
+    background-image:url(images/ropecropped.png);
+    background-repeat:repeat-y;
+    background-position-x: 50%;
+    background-clip: border-box;
+
 }
 
 .wellbottom > song {
     
 }
 
-.frucket{
-    
+.wellbottom > frucket{
+    z-index:1;
+    position:static;
+    transform: translateX(-4px);
+    margin:auto;
+    width: auto;
 }
