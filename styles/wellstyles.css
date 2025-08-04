@@ -1,0 +1,102 @@
+body {
+    background-color:black;
+    background-image:
+        linear-gradient(blue 40%, lawngreen 42%, black 80%);
+    height:150vh;
+    background-repeat:no-repeat;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.welltop1 {
+    z-index: 20;
+    position: absolute;
+    top:0px;
+    background-color:blue;
+}
+
+.welltop2 {
+    z-index: 0;
+    position: absolute;
+    top:369px;
+    background-color:blue;
+}
+
+.welltop3 {
+    z-index:3;
+    position: absolute;
+    top:526px;
+}
+
+.rope {
+    z-index:1;
+    position:sticky;
+    top:0px;
+    width:15px;
+    height:369px;
+    margin:auto;
+    object-fit: none;
+}
+
+.frucket {
+    z-index:1;
+    position:sticky;
+    top:369px;
+    width:173px;
+    height:240px;
+    margin:auto;
+}
+
+.wellcontent {
+    z-index:5;
+    margin:auto;
+    position: static;
+    padding-top: 250px ;
+    width: 315px;
+    display: flex;
+    flex-direction: column;
+    align-text:center;
+}
+
+.wellwall {
+    position: absolute;
+    left: 50vw;
+    transform: translateX(-50%);
+    top:0px;
+    width: 498px;
+    padding-top:0px;
+    display: flex;
+    flex-direction: column;
+    background-image:
+        linear-gradient(to right, rgba(0,0,0,0.8), transparent 50%),
+        url(../images/wellwall3.png);
+    background-position: center;
+    background-size: 316px, 315px;
+    background-repeat: repeat-y;
+    align-content:center;
+}
+
+.wellcontent > part {
+    width: auto;
+    padding: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+.wellcontent > bottom {
+    height:254px;
+    width:315px;
+    background-image:
+        url(../images/wellwater.png),
+        linear-gradient(transparent, black);
+    background-position: center;
+    margin:auto;
+    align-content:center;
+}
+
+.frog {
+    display:block;
+    margin:auto;
+}

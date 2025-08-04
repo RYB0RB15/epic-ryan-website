@@ -1,12 +1,17 @@
+html, body {
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
+}
+
 body {
     background-image: 
         radial-gradient(circle at 50% 600%, rgba(0,0,0,0) 85.5%, blue 85.5%, blue 95%, white), 
         conic-gradient( at 50% 80%, lawngreen 90deg, limegreen 118deg, rgba(0,0,0,0) 120deg, rgba(0,0,0,0) 240deg, limegreen 242deg, lawngreen 270deg), 
-        url(images/brix.jpg);
-    background-repeat:no-repeat;
-    background-position:
-        center bottom;
-    background-size:auto,auto,700px;
+        url(../images/brix.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: auto,auto,700px;
 }
 
 .header {
