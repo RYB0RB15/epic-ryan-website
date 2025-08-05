@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="styles/wellstyles.css">
     <title>Ryb0's World - The Well</title>
     <link rel="icon" href="images/icon.png" type="image/png" />
-    <script src="audioplayer.js"></script>
+    <script src="scripts/wellscripts.js"></script>
 </head>
 
 <body>
@@ -14,21 +14,27 @@
         <img src="images/well3bot.png" alt="The Well" class="welltop3">
 
         <img src="images/ropecropped3.png" class="rope" />
-        <img src="images/empty.gif" class="frucket" />
+        <img src="images/empty.gif" 
+             class="bucket"
+             id="bucket"
+             data-has-frog="false"
+             ondrop="dropHandler(event)"
+             ondragover="dragoverHandler(event)"
+             ondragstart="dragstartHandler(event)"/>
 
         <div class="wellcontent">
-            <part style="height:300vh;">i pooed my panse</part>
-            <bottom>
-                <img src="images/icon.png" class="frog" />
-                <a href="dragdroptest.html"><img src="images/mainpagewell.png" alt="click me!!" class="well"></a>
-
-            </bottom>
+            <part style="height:300vh;">filler text</part>
         </div>
 
+        <bottom>
+            <img src="images/lilypadfrog.png" 
+                 class="lilypad"
+                 id="lilypad"
+                 data-has-frog="true"
+                 draggable="true"
+                 ondragstart="dragstartHandler(event)" />
+        </bottom>
     </div>
-
-
-
 
 </body>
 </html>

@@ -39,7 +39,7 @@ body {
     object-fit: none;
 }
 
-.frucket {
+.bucket {
     z-index:1;
     position:sticky;
     top:369px;
@@ -83,20 +83,27 @@ body {
     text-align: center;
     line-height: 75px;
     font-size: 30px;
+    background-color:rgba(255,255,255,0.5);
 }
 
-.wellcontent > bottom {
-    height:254px;
+.wellwall > bottom {
+    position:relative;
+    margin:auto;
+    height:80vh;
     width:315px;
+    bottom:0px;
+    background-position: bottom;
     background-image:
         url(../images/wellwater.png),
         linear-gradient(transparent, black);
-    background-position: center;
-    margin:auto;
-    align-content:center;
+    background-repeat:no-repeat;
 }
 
-.frog {
+.lilypad {
     display:block;
-    margin:auto;
+    position:absolute;
+    bottom:125px;
+    left:50%;
+    transform: translateX(-50%);
+
 }
