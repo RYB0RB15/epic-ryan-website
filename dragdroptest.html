@@ -21,7 +21,7 @@
             const sender = document.getElementById(ev.dataTransfer.getData("text"));
             const receiver = ev.target;
 
-            if (sender.dataset.hasFrog === "true" && frogUpdate(receiver, true)) {
+            if (sender != receiver && sender.dataset.hasFrog === "true" && frogUpdate(receiver, true)) {
                 frogUpdate(sender, false);
             }
         }
