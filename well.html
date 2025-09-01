@@ -8,33 +8,47 @@
 </head>
 
 <body>
+    <audio id='sfx' src="sounds/frucketcroak.mp3" type="audio/mp3"></audio>
+    <link rel="preload" href="images/frucket4.gif" as="image">
+    <link rel="preload" href="images/frogsad.png" as="image">
+
+
     <div class="wellwall">
-        <img src="images/well3top.png" alt="The Well" class="welltop1">
-        <img src="images/well3mid.png" alt="The Well" class="welltop2">
-        <img src="images/well3bot.png" alt="The Well" class="welltop3">
+        <img src="images/well3top.png" alt="The Well" class="welltop1" draggable="false">
+        <img src="images/well3mid.png" alt="The Well" class="welltop2" draggable="false">
+        <img src="images/well3bot.png" alt="The Well" class="welltop3" draggable="false">
 
         <img src="images/ropecropped3.png" class="rope" />
-        <img src="images/empty.gif" 
+        <img src="images/empty.gif"
              class="bucket"
              id="bucket"
              data-has-frog="false"
              ondrop="dropHandler(event)"
              ondragover="dragoverHandler(event)"
-             ondragstart="dragstartHandler(event)"/>
+             ondragstart="dragstartHandler(event)"
+             onclick="croakCheck(this.dataset.hasFrog)"/>
 
         <div class="wellcontent">
-            <part style="height:300vh;">filler text</part>
+            <part style="height:300vh;">Rumours are spreading that a frog has fallen down the well. Try using the bucket to save it!</part>
         </div>
 
         <bottom>
-            <img src="images/lilypadfrog.png" 
+            <img src="images/wellwater.png" class="wellwater" />
+            <img src="images/lilypadfrog.png"
                  class="lilypad"
                  id="lilypad"
                  data-has-frog="true"
                  draggable="true"
-                 ondragstart="dragstartHandler(event)" />
+                 ondragstart="dragstartHandler(event)"
+                 onclick="croakCheck(this.dataset.hasFrog)"
+                 title="drag me to the bucket please :)" />
+            <!--
+                <img src="images/cavefront.png" class="cavefront" />
+                <img src="images/mitesntites.png" class="cavelayer1" />
+                -->
         </bottom>
     </div>
-
+<!--    <a href="audiotest.html"><img src="images/mainpagewell.png" alt="click me!!" class="well"></a>
+-->
 </body>
 </html>

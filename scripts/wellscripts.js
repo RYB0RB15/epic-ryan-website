@@ -18,6 +18,9 @@ function dropHandler(ev) {
     if (sender != receiver && sender.dataset.hasFrog === "true" && frogUpdate(receiver, true)) {
         frogUpdate(sender, false);
     }
+    else {
+        frogUpdate(sender, true);
+    }
 }
 
 function frogUpdate(element, value) {
@@ -37,4 +40,12 @@ function frogUpdate(element, value) {
             return false;
     }
     return true;
+}
+
+function croakCheck(hasFrog) {
+    if (hasFrog === "true") {
+        const cuica = document.getElementById('sfx');
+        cuica.currentTime = 0;
+        cuica.play();
+    }
 }

@@ -6,32 +6,61 @@ html, body {
 
 body {
     background-image: 
-        radial-gradient(circle at 50% 600%, rgba(0,0,0,0) 85.5%, blue 85.5%, blue 95%, white), 
-        conic-gradient( at 50% 80%, lawngreen 90deg, limegreen 118deg, rgba(0,0,0,0) 120deg, rgba(0,0,0,0) 240deg, limegreen 242deg, lawngreen 270deg), 
+        radial-gradient(circle at 50% 600%,
+            rgba(0,0,0,0) 85.5%, 
+            rgb(50,50,255) 85.5%, 
+            #4026bf 97%), 
+
+        conic-gradient( at 50% 80%, 
+            lawngreen 90deg, 
+            limegreen 118deg, 
+            rgba(0,0,0,0) 120deg, 
+            rgba(0,0,0,0) 240deg, 
+            limegreen 242deg,
+            lawngreen 270deg), 
+
         url(../images/brix.jpg);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: auto,auto,700px;
+        overflow-x:hidden;
+
 }
 
-.header {
-    margin:auto;
-    margin-bottom:20px;
-    width: 45%;
-    border:20px solid magenta;
-    color:lawngreen;
-    clear:both;
-    display:table;
+.welcomebanner {
+    position: static;
+    z-index: 2;
+    margin: auto;
+    margin-bottom: 20px;
+    border: 20px solid magenta;
+    color: lawngreen;
+    clear: both;
+    background-color:rgba(255,150,255,0.2);
 }
 
-.frogz {
+.head {
+    transition: transform 0.5s linear ;
+}
+
+.head:hover {
+    transform:rotate(360deg);
+}
+
+.topfrogz {
     display: block;
     margin: auto;
-    padding: 5px;
+    padding-top: 5px;
+}
+
+.bottomfrogz {
+    display: block;
+    margin: auto;
+    padding-bottom: 5px;
 }
 
 .brownbox {
-    width: 40%;
+    position:static;
+    width: 40vw;
     margin: auto;
     background-color: saddlebrown;
     border: ridge gold 10px;
@@ -45,19 +74,68 @@ body {
     font-size: 45px;
     white-space: nowrap;
     text-shadow: 0px 0px 10px black;
+    padding:0px;
 }
 
 .well {
     position:absolute;
     left:70%;
-    top:65%;
+    bottom:7%;
 }
 
 .sun {
+    z-index:-5;
     position:absolute;
     top:0%;
     left:0%;
     background-image: radial-gradient(circle at 0% 0%, yellow 45%, rgba(0,0,0,0) 70%);
-    width:320px;
-    height:320px;
+    width:15vw;
+    height:15vw;
+    pointer-events:auto;
+}
+
+.sundupe {
+    z-index: 5;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 15vw;
+    height: 15vw;
+    pointer-events: auto;
+}
+
+.cloudrow {
+    z-index: -1;
+    position: absolute;
+    background-image: url(../images/cloud.png);
+    background-position: center;
+    width: 120vw;
+    height: 150px;
+    background-repeat: repeat-x;
+    top: 5vh;
+    pointer-events: none;
+    animation: bigclouds 15s linear infinite;
+}
+
+.smallcloudrow {
+    z-index: -2;
+    position: absolute;
+    background-image: url(../images/cloudsmaller.png);
+    background-position: center;
+    width: 120vw;
+    height: 75px;
+    background-repeat: repeat-x;
+    top: 15vh;
+    pointer-events: none;
+    animation: smallclouds 15s linear infinite;
+}
+
+@keyframes bigclouds {
+    from{transform:translateX(0px);}
+    to {transform:translateX(-200px);}
+}
+
+@keyframes smallclouds {
+    from{transform:translateX(0px);}
+    to {transform:translateX(-100px);}
 }

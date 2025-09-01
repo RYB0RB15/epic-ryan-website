@@ -1,9 +1,8 @@
 body {
-    background-color:black;
-    background-image:
-        linear-gradient(blue 40%, lawngreen 42%, black 80%);
-    height:150vh;
-    background-repeat:no-repeat;
+    background-color: black;
+    background-image: linear-gradient(rgb(50,50,255) 40%, lawngreen 42%, black 80%);
+    height: 1500px;
+    background-repeat: no-repeat;
     color: white;
     margin: 0;
     padding: 0;
@@ -12,21 +11,24 @@ body {
 .welltop1 {
     z-index: 20;
     position: absolute;
-    top:0px;
-    background-color:blue;
+    top: 0px;
+    background-color: rgb(50,50,255);
+    pointer-events: none;
 }
 
 .welltop2 {
     z-index: 0;
     position: absolute;
-    top:369px;
-    background-color:blue;
+    top: 369px;
+    background-color: rgb(50,50,255);
+    pointer-events: none;
 }
 
 .welltop3 {
-    z-index:3;
+    z-index: 3;
     position: absolute;
-    top:526px;
+    top: 526px;
+    pointer-events: none;
 }
 
 .rope {
@@ -49,14 +51,15 @@ body {
 }
 
 .wellcontent {
-    z-index:5;
-    margin:auto;
+    z-index: 5;
+    margin: auto;
     position: static;
-    padding-top: 250px ;
+    padding-top: 250px;
     width: 315px;
     display: flex;
     flex-direction: column;
-    align-text:center;
+    text-align: center;
+    pointer-events: none;
 }
 
 .wellwall {
@@ -70,7 +73,7 @@ body {
     flex-direction: column;
     background-image:
         linear-gradient(to right, rgba(0,0,0,0.8), transparent 50%),
-        url(../images/wellwall3.png);
+        url(../images/newnewwellwall2.png);
     background-position: center;
     background-size: 316px, 315px;
     background-repeat: repeat-y;
@@ -82,20 +85,29 @@ body {
     padding: 10px;
     text-align: center;
     line-height: 75px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .wellwall > bottom {
     position:relative;
     margin:auto;
-    height:80vh;
+    height:90vh;
     width:315px;
     bottom:0px;
     background-position: bottom;
     background-image:
-        url(../images/wellwater.png),
-        linear-gradient(transparent, black);
-    background-repeat:no-repeat;
+        linear-gradient(transparent, black );
+}
+
+.wellwater {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    object-fit: cover;
+    width: 215px;
+    height: 254px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .lilypad {
@@ -104,5 +116,23 @@ body {
     bottom:125px;
     left:50%;
     transform: translateX(-50%);
+}
 
+.cavefront {
+    z-index:20;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cavelayer1 {
+    z-index: 19;
+    display: block;
+    position: absolute;
+    bottom: 100px;
+    left:50%;
+    transform: translateX(-400px);
+    width: 2421px;
 }
