@@ -15,11 +15,13 @@ function dropHandler(ev) {
     const sender = document.getElementById(ev.dataTransfer.getData("text"));
     const receiver = ev.target;
 
-    if (sender != receiver && sender.dataset.hasFrog === "true" && frogUpdate(receiver, true)) {
-        frogUpdate(sender, false);
-    }
-    else {
-        frogUpdate(sender, true);
+    if (sender != receiver && sender.dataset.hasFrog === "true") {
+        if (frogUpdate(receiver, true)) {
+            frogUpdate(sender, false);
+        }
+        else {
+            frogUpdate(sender, true);
+        }
     }
 }
 
