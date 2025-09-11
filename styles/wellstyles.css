@@ -75,7 +75,7 @@ body {
         linear-gradient(to right, rgba(0,0,0,0.8), transparent 50%),
         url(../images/newnewwellwall2.png);
     background-position: center;
-    background-size: 316px, 315px;
+    background-size: 305px, 304px;
     background-repeat: repeat-y;
     align-content:center;
 }
@@ -92,7 +92,7 @@ body {
     position:relative;
     margin:auto;
     height:90vh;
-    width:315px;
+    width:305px;
     bottom:0px;
     background-position: bottom;
     background-image:
@@ -119,20 +119,31 @@ body {
 }
 
 .cavefront {
-    z-index:20;
+    z-index: 20;
     display: block;
     position: absolute;
-    bottom: 0px;
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
+    pointer-events: none;
 }
 
 .cavelayer1 {
     z-index: 19;
     display: block;
+    overflow: auto;
+    white-space: nowrap;
     position: absolute;
-    bottom: 100px;
-    left:50%;
+    bottom: 20px;
+    left: 50%;
+    height: 750px;
     transform: translateX(-400px);
-    width: 2421px;
+    width: 810px;
+/*    pointer-events: none;
+*/}
+
+.cavelayer1 img {
+    display: inline-block;
+    pointer-events: none;
+    top:20px;
 }

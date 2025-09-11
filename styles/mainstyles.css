@@ -1,41 +1,66 @@
 html, body {
-    height: 100%; 
+    height: 200vh; 
+    width:100vw;
     margin: 0; 
     padding: 0; 
+    position:absolute;
 }
 
 body {
+    color: white;
+    width: 100vw;
+    overflow-x: hidden;
+    background-image: linear-gradient(black,#000066);
+}
+
+.sky {
+    position:absolute;
+    top:50vh;
+    left:50vw;
+    transform:translateX(-50%);
+}
+
+.bottomscreen {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    padding: 0px;
+    margin: 0px;
     background-image: 
         radial-gradient(circle at 50% 600%,
             rgba(0,0,0,0) 85.5%, 
             rgb(50,50,255) 85.5%, 
-            #4026bf 97%), 
+            #4026bf 96%,
+            rgba(0,0,0,0) 98%), 
 
-        conic-gradient( at 50% 80%, 
+        conic-gradient( at 50% 79%, 
+            rgba(0,0,0,0) 90deg,
             lawngreen 90deg, 
             limegreen 118deg, 
             rgba(0,0,0,0) 120deg, 
             rgba(0,0,0,0) 240deg, 
             limegreen 242deg,
-            lawngreen 270deg), 
+            lawngreen 270deg,
+            rgba(0,0,0,0) 270deg), 
 
         url(../images/brix.jpg);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: auto,auto,700px;
-        overflow-x:hidden;
-
+    overflow-x: hidden;
 }
 
 .welcomebanner {
-    position: static;
-    z-index: 2;
-    margin: auto;
+    position: fixed;
+    z-index: 20;
+    left: 50%;
+    transform: translateX(-50%);
     margin-bottom: 20px;
     border: 20px solid magenta;
     color: lawngreen;
     clear: both;
-    background-color:rgba(255,150,255,0.2);
+    background-color: rgba(255,150,255,0.2);
 }
 
 .head {
@@ -59,14 +84,34 @@ body {
 }
 
 .brownbox {
-    position:static;
+    position: absolute;
     width: 40vw;
     margin: auto;
+    top: 210px;
+    left:50%;
+    transform:translateX(-50%);
     background-color: saddlebrown;
-    border: ridge gold 10px;
+    border: ridge gold 0.6vw;
     color: white;
     font-size: 20px;
-    line-height: 5px;
+    line-height: 20px;
+    padding:10px;
+    visibility:visible;
+}
+    .brownbox > ul > li {
+        padding:5px;
+    }
+
+    .brownbox > h3 {
+        text-align:center;
+    }
+
+.okbutton {
+    position:absolute;
+    bottom:10px;
+    right:20px;
+    height:40px;
+    width:70px;
 }
 
 .titletext {
@@ -81,19 +126,25 @@ body {
     position: absolute;
     left: 70%;
     bottom: 7%;
-    width:112px;
-    transform:translateX(-50%), translateY(-50%);
-    transition: width 0.2s linear;
+    width: 112px;
+    transform: translateX(-50%), translateY(-50%);
+    transition:--wellglow 0.3s linear;
+    background-image: radial-gradient( var(--wellglow), rgba(0,0,0,0) 70%);
+}
+
+@property --wellglow {
+    syntax: '<color>';
+    initial-value: rgba(0,0,0,0);
+    inherits: false;
 }
 
 .well:hover {
-    width: 115px;
-    background-image: radial-gradient( rgba(255,255,255,0.3) 45%, rgba(0,0,0,0) 70%);
+    --wellglow: rgba(255,255,255,0.6);
 }
         
 .sun {
-    z-index:-5;
-    position:absolute;
+    z-index:1;
+    position:fixed;
     top:0%;
     left:0%;
     background-image: radial-gradient(circle at 0% 0%, yellow 45%, rgba(0,0,0,0) 70%);
@@ -103,8 +154,8 @@ body {
 }
 
 .sundupe {
-    z-index: 5;
-    position: absolute;
+    z-index: 100;
+    position: fixed;
     top: 0%;
     left: 0%;
     width: 15vw;
@@ -112,38 +163,105 @@ body {
     pointer-events: auto;
 }
 
+
 .cloudrow {
-    z-index: -1;
+    bottom: 85vh;
     position: absolute;
-    background-image: url(../images/cloud.png);
-    background-position: center;
-    width: 120vw;
-    height: 150px;
-    background-repeat: repeat-x;
-    top: 5vh;
-    pointer-events: none;
-    animation: bigclouds 15s linear infinite;
+    width: 100vw;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    transform-origin: 50% 50%;
 }
 
-.smallcloudrow {
-    z-index: -2;
-    position: absolute;
-    background-image: url(../images/cloudsmaller.png);
-    background-position: center;
-    width: 120vw;
+.cloudrow1 {
+    height:150px;
+}
+
+.cloudrow2 {
     height: 75px;
-    background-repeat: repeat-x;
-    top: 15vh;
-    pointer-events: none;
-    animation: smallclouds 15s linear infinite;
 }
 
-@keyframes bigclouds {
+.cloudrow3 {
+    height: 45px;
+}
+
+.cloud {
+    position: absolute;
+    transform-origin: 50% 50%;
+    background-position: center;
+    width: 120vw;
+    background-repeat: repeat-x;
+}
+
+.cloud1 {
+    background-image: url(../images/cloud.png);
+    height:150px;
+    animation:cloudscroll1 5s linear infinite;
+    z-index: 5;
+}
+
+.cloud2 {
+    background-image: url(../images/cloudsmaller.png);
+    height: 75px;
+    animation: cloudscroll2 5s linear infinite;
+    z-index: 4;
+}
+
+.cloud3 {
+    background-image: url(../images/cloudtiny.png);
+    height: 45px;
+    animation: cloudscroll3 5s linear infinite;
+    z-index: 3;
+}
+
+@keyframes cloudscroll1 {
     from{transform:translateX(0px);}
     to {transform:translateX(-200px);}
 }
 
-@keyframes smallclouds {
+@keyframes cloudscroll2 {
     from{transform:translateX(0px);}
     to {transform:translateX(-100px);}
+}
+
+@keyframes cloudscroll3 {
+    from{transform:translateX(0px);}
+    to {transform:translateX(-60px);}
+}
+
+.par1 {
+    animation: parallax1 linear;
+    animation-timeline: view();
+    animation-range: cover;
+    z-index: 5;
+}
+
+.par2 {
+    animation: parallax2 linear;
+    animation-timeline: view();
+    animation-range: cover;
+    z-index: 4;
+}
+
+.par3 {
+    animation: parallax3 linear;
+    animation-timeline: view();
+    animation-range: cover;
+    z-index: 3;
+}
+
+@keyframes parallax1 {
+    from{transform:translateY(500px)}
+    to{transform:translateY(-200px)}
+}
+
+@keyframes parallax2 {
+    from {transform: translateY(250px)}
+    to {transform: translateY(-100px)}
+}
+
+@keyframes parallax3 {
+    from {transform: translateY(150px)}
+    to {transform: translateY(-60px)}
 }
