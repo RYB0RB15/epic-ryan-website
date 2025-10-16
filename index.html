@@ -9,8 +9,19 @@
 </head>
 
 <body>
+    <link rel="preload" href="images/sunglanim2.webm" as="video">
+
+
     <a href="thesun.html" title="click me!!" class="sun"></a>
     <a href="thesun.html" title="click me!!" class="sundupe"></a>
+
+    <div class="sunglassesfilter" id="sunglassesFilter">
+        <video class="sunglanim" id="sunglanim">
+            <source src="images/sunglanim.webm" type="video/webm" />
+        </video>
+    </div>
+
+    <div class="stars par1" style="z-index:-5"></div>
 
     <div class="sky">
         night sky (maybe) coming soon :-)
@@ -45,6 +56,21 @@
         </tr>
     </table>
 
+    <table class="itembar">
+        <tr>
+            <td>sdfdssdfdsfsdfsdff</td>
+            <td>hjhj</td>
+            <td></td>
+            <td>vcvcv</td>
+            <td>
+                <img id="sunglasses" class="sunglasses" src="images/sunglasses3.gif" onclick="glassesToggle()" />
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
 
     <div class="bottomscreen">
 
@@ -55,6 +81,7 @@
                 <li>I'm writing all the html/css/javascript by myself, and it's my first time making a proper website, so some things might not function properly, particularly on different browsers. </li>
                 <li>I haven't tested functionality on every browser, but things work as intended in the desktop version of Opera, so you'll have the best experience using that.</li>
                 <li>Mobile layout tends to break a few things so I'd recommend using a computer if you can. Hopefully you don't encounter many bugs.</li>
+                <li>I'm currently trying to implement cookies, so if you have those off by default, please enable them for this site. </li>
             </ul>
             <p>It's still a work in progress so check back often to see if things have changed!</p>
             <p>Anyway, have fun poking around :-)</p>

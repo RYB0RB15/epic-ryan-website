@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="scripts/drumscript.js" defer></script>
+    <link rel="stylesheet" href="styles/drumdemostyles.css">
+    <title>Ryb0's World</title>
+</head>
+
+<body>
+
+    <audio id='cuica' src="sounds/drumkit/sd.wav" type="audio/wav" controls></audio>
+    <audio id='song1' src="sounds/drumkit/kick.wav" type="audio/wav" controls></audio>
+    <audio id='song2' src="sounds/drumkit/chhl.wav" type="audio/wav" controls></audio>
+
+
+    <button id='play' value="play" onclick="metroTick()">play</button>
+
+    <input type="checkbox" id="metroToggle" onclick="metroToggle()" />
+    <table>
+        <tr>
+            <td>
+                <input type="checkbox" id="tog1" />
+            </td>
+            <td>
+                <input type="checkbox" id="tog2" />
+            </td>
+            <td>
+                <input type="checkbox" id="tog3" />
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
