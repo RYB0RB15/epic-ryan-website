@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="styles/wellstyles.css">
     <title>Ryb0's World - The Well</title>
     <link rel="icon" href="images/icon.png" type="image/png" />
+
+    <link rel="stylesheet" href="styles/wellstyles.css">
+    <link rel="stylesheet" href="styles/hud.css">
+
+
+    <script src="scripts/cookies.js"></script>
+    <script src="scripts/items.js"></script>
     <script src="scripts/wellscript.js"></script>
 </head>
 
 <body>
+    <link rel="preload" href="images/sunglanim2.webm" as="video">
+    <div class="sunglassesfilter" id="sunglassesFilter">
+        <video class="sunglanim" id="sunglanim" onended="sunglanimEnd()">
+            <source src="images/sunglanim.webm" type="video/webm" />
+        </video>
+    </div>
+    <table class="itembar">
+        <tr>
+            <td>sdfdssdfdsfsdfsdff</td>
+            <td>hjhj</td>
+            <td></td>
+            <td>vcvcv</td>
+            <td id="sunglassesBox">
+                <img id="sunglassesItem" src="images/sunglasses3.gif" onclick="glassesToggle()" />
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
     <audio id='sfx' src="sounds/frucketcroak.mp3" type="audio/mp3"></audio>
     <link rel="preload" href="images/frucket4.gif" as="image">
     <link rel="preload" href="images/frogsad.png" as="image">
-
 
     <div class="wellwall">
         <img src="images/well3top.png" alt="The Well" class="welltop1" draggable="false">
@@ -26,7 +53,7 @@
              ondrop="dropHandler(event)"
              ondragover="dragoverHandler(event)"
              ondragstart="dragstartHandler(event)"
-             onclick="croakCheck(this.dataset.hasFrog)"/>
+             onclick="croakCheck(this.dataset.hasFrog)" />
 
         <div class="wellcontent">
             <part style="height:300vh;">Rumours are spreading that a frog has fallen down the well. Try using the bucket to save it!</part>
@@ -42,14 +69,15 @@
                  ondragstart="dragstartHandler(event)"
                  onclick="croakCheck(this.dataset.hasFrog)"
                  title="drag me to the bucket please :)" />
-<!--            
-                <img src="images/cavefrontwithmask2.png" class="cavefront" />
-                <div class="cavelayer1">
-                    <img src="images/mitesntites.png" />
-                </div>-->
-                
+            <!--
+                            <img src="images/cavefrontwithmask2.png" class="cavefront" />
+                            <div class="cavelayer1">
+                                <img src="images/mitesntites.png" />
+                            </div>-->
+
         </bottom>
     </div>
-<!--    <a href="drumdemo.html"><img src="images/mainpagewell.png" alt="click me!!" class="well"></a>
---></body>
+    <!--    <a href="drumdemo.html"><img src="images/mainpagewell.png" alt="click me!!" class="well"></a>
+    -->
+</body>
 </html>

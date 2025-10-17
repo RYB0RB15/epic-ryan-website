@@ -1,0 +1,58 @@
+.sunglassesfilter {
+    z-index: 25;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgba(0,0,0,0.5);
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.sunglanim {
+    visibility: hidden;
+    position: absolute;
+    left: 50vw;
+    transform: translateX(-50%);
+}
+
+.itembar {
+    position: fixed;
+    z-index: 30;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    border: ridge brown 0.6vw;
+    color: black;
+    background-color: gold;
+    width: 450px;
+    height: 50px;
+    table-layout: fixed;
+}
+
+    .itembar td {
+        width: 50px;
+        height: 50px;
+        margin: 0px;
+        background-color: var(--itemhover);
+        color: white;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding: 0px;
+        transition: --itemhover 0.2s linear;
+    }
+
+@property --itemhover {
+    syntax: '<color>';
+    initial-value: rgb(75,40,0);
+    inherits: false;
+}
+
+.itembar td:hover {
+    --itemhover: rgb(150,80,0);
+}
+

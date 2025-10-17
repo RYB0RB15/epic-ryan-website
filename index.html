@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="styles/mainstyles.css">
-    <script src="scripts/mainscript.js"></script>
-
     <title>Ryb0's World</title>
     <link rel="icon" href="images/icon.png" type="image/png" />
+
+    <link rel="stylesheet" href="styles/mainstyles.css">
+    <link rel="stylesheet" href="styles/hud.css">
+
+    <script src="scripts/cookies.js"></script>
+    <script src="scripts/items.js"></script>
+    <script src="scripts/mainscript.js"></script>
+
 </head>
 
 <body>
     <link rel="preload" href="images/sunglanim2.webm" as="video">
+    <div class="sunglassesfilter" id="sunglassesFilter">
+        <video class="sunglanim" id="sunglanim" onended="sunglanimEnd()">
+            <source src="images/sunglanim.webm" type="video/webm" />
+        </video>
+    </div>
 
 
     <a href="thesun.html" title="click me!!" class="sun"></a>
     <a href="thesun.html" title="click me!!" class="sundupe"></a>
 
-    <div class="sunglassesfilter" id="sunglassesFilter">
-        <video class="sunglanim" id="sunglanim">
-            <source src="images/sunglanim.webm" type="video/webm" />
-        </video>
-    </div>
 
     <div class="stars par1" style="z-index:-5"></div>
 
@@ -62,8 +67,8 @@
             <td>hjhj</td>
             <td></td>
             <td>vcvcv</td>
-            <td>
-                <img id="sunglasses" class="sunglasses" src="images/sunglasses3.gif" onclick="glassesToggle()" />
+            <td id="sunglassesBox">
+                <img id="sunglassesItem" src="images/sunglasses3.gif" onclick="glassesToggle()" />
             </td>
             <td></td>
             <td></td>
